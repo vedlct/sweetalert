@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>SweetAlert</title>
+
+    <link rel="stylesheet" href="example/example.css">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+    <!-- This is what you need -->
+    <script src="dist/sweetalert-dev.js"></script>
+    <link rel="stylesheet" href="dist/sweetalert.css">
+    <!--.......................-->
+
+</head>
+
+<li class="warning confirm">
+    <div class="ui">
+        <button>Try me!</button>
+    </div>
+    <pre><span class="attr">swal</span>({
+&nbsp;&nbsp;title: <span class="str">"Are you sure?"</span>,
+&nbsp;&nbsp;text: <span class="str">"You will not be able to recover this imaginary file!"</span>,
+&nbsp;&nbsp;type: <span class="str">"warning"</span>,
+&nbsp;&nbsp;showCancelButton: <span class="val">true</span>,
+&nbsp;&nbsp;confirmButtonColor: <span class="str">"#DD6B55"</span>,
+&nbsp;&nbsp;confirmButtonText: <span class="str">"Yes, delete it!"</span>,
+&nbsp;&nbsp;closeOnConfirm: <span class="val">false</span>
+},
+<span class="func"><i>function</i></span>(){
+&nbsp;&nbsp;<span class="attr">swal</span>(<span class="str">"Deleted!"</span>, <span class="str">"Your imaginary file has been deleted."</span>, <span class="str">"success"</span>);
+});</pre>
+</li>
+
+
+</html>
+<script>
+document.querySelector('li.warning.confirm button').onclick = function(){
+swal({
+title: "Are you sure to place the Oder?",
+type: "warning",
+showCancelButton: true,
+confirmButtonColor: '#DD6B55',
+confirmButtonText: 'Yes',
+closeOnConfirm: false
+},
+function(){
+swal("Done!", "Your Oder is Placed", "success");
+});
+};
+</script>
